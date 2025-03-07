@@ -43,9 +43,9 @@ if st.button("🔍 Start Full Analysis & Generate Numbers"):
     process_step("Machine Learning Models", 6)
     process_step("Prediction Generation", 7)
     
-    st.success("🎉 All analyses completed!")
+    st.success(" All analyses completed!")
 
     # Generate Lucky Lottery Numbers
     lucky_numbers = sorted(random.sample(range(1, 100), 6))
-    st.subheader("🔮 Your Lucky Lottery Numbers:")
-    st.success(f"🎉 {lucky_numbers}")
+    st.subheader(" Your Lucky Lottery Numbers:")
+    st.success(f" {lucky_numbers}")
