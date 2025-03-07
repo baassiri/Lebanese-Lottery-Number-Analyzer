@@ -47,5 +47,5 @@ if st.button("🔍 Start Full Analysis & Generate Numbers"):
 
     # Generate Lucky Lottery Numbers
     lucky_numbers = sorted(random.sample(range(1, 43), 6))
-    st.subheader(" Your Lucky Lottery Numbers:")
+    st.subheader(" Your Lucky Lottery Numbers (for educational purposes only):")
     st.success(f" {lucky_numbers}")
