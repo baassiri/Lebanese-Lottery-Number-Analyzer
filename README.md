@@ -44,3 +44,6 @@ LEB Lottery Number Gen/
 ## Notes
 - This project is for analytical and educational purposes only.
 - The lottery is inherently random, and predictions do not guarantee results.
+
+## Jarrib Hazzak
+(https://lebanese-lottery-number-analyzer-nhi9cupftmcgwomx6meemk.streamlit.app/)
