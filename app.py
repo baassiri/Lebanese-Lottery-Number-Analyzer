@@ -10,14 +10,14 @@ def load_data():
 df = load_data()
 
 # App Title
-st.title("🎰 Lebanese Lottery Number Generator 🎰")
+st.title(" Lebanese Lottery Number Generator ")
 
 # Show dataset
 if st.checkbox("Show Raw Data"):
     st.write(df)
 
 # Generate Lucky Numbers
-st.header("🔮 Generate Lucky Lottery Numbers")
+st.header(" Jarrib Hazzak ")
 if st.button("Click to Generate"):
     lucky_numbers = sorted(random.sample(range(1, 100), 6))
     st.success(f"Your lucky numbers: {lucky_numbers}")
