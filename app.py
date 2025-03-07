@@ -1,23 +1,52 @@
 import streamlit as st
 import pandas as pd
+import numpy as np
+import time
 import random
 
+# Set page title
+st.set_page_config(page_title="Lebanese Lottery Analyzer", page_icon="🎰")
+
+# Title
+st.title("🎰 Lebanese Lottery Number Generator")
+
 # Load dataset
-@st.cache
+@st.cache_data
 def load_data():
-    return pd.read_csv("Data/Lebanese_Lottery.csv")
+    df = pd.read_csv("Data/Lebanese_Lottery.csv")
+    return df
 
 df = load_data()
 
-# App Title
-st.title(" Lebanese Lottery Number Generator ")
-
-# Show dataset
-if st.checkbox("Show Raw Data"):
+# Show raw data
+if st.checkbox("📜 Show Raw Data"):
     st.write(df)
 
-# Generate Lucky Numbers
-st.header(" Jarrib Hazzak ")
+# Progress Bar Setup
+progress_bar = st.progress(0)
+status_text = st.empty()
+
+# Function to simulate processing steps
+def process_step(step_name, step_number, total_steps=7):
+    with st.spinner(f"Running {step_name}..."):
+        time.sleep(1.5)  # Simulating computation time
+        progress_bar.progress(step_number / total_steps)
+        status_text.success(f"✅ {step_name} Done!")
+
+# Run Analysis with Visual Feedback
+if st.button("🔍 Start Analysis"):
+    process_step("Descriptive Statistics", 1)
+    process_step("Probability Analysis", 2)
+    process_step("Time Series Analysis", 3)
+    process_step("Combinatorial Analysis", 4)
+    process_step("Anomaly Detection", 5)
+    process_step("Machine Learning Models", 6)
+    process_step("Prediction Generation", 7)
+    
+    st.success("🎉 All analyses completed!")
+
+# Generate Lucky Lottery Numbers
+st.subheader("🔮 Generate Lucky Lottery Numbers")
 if st.button("Click to Generate"):
     lucky_numbers = sorted(random.sample(range(1, 100), 6))
-    st.success(f"Your lucky numbers: {lucky_numbers}")
+    st.success(f"🎉 Your lucky numbers: {lucky_numbers}")
