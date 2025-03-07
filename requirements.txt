@@ -1,3 +1,4 @@
+streamlit
 pandas
 numpy
 matplotlib
@@ -5,6 +6,3 @@ seaborn
 scipy
 statsmodels
 scikit-learn
-collections
-random
-datetime
