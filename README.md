@@ -44,7 +44,3 @@ LEB Lottery Number Gen/
 ## Notes
 - This project is for analytical and educational purposes only.
 - The lottery is inherently random, and predictions do not guarantee results.
-
-## License
-MIT License
-
