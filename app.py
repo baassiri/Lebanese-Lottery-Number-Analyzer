@@ -33,8 +33,8 @@ def process_step(step_name, step_number, total_steps=7):
         progress_bar.progress(step_number / total_steps)
         status_text.success(f"✅ {step_name} Done!")
 
-# Run Analysis with Visual Feedback
-if st.button("🔍 Start Analysis"):
+# Run Analysis & Generate Numbers
+if st.button("🔍 Start Full Analysis & Generate Numbers"):
     process_step("Descriptive Statistics", 1)
     process_step("Probability Analysis", 2)
     process_step("Time Series Analysis", 3)
@@ -45,8 +45,7 @@ if st.button("🔍 Start Analysis"):
     
     st.success("🎉 All analyses completed!")
 
-# Generate Lucky Lottery Numbers
-st.subheader("🔮 Generate Lucky Lottery Numbers")
-if st.button("Click to Generate"):
+    # Generate Lucky Lottery Numbers
     lucky_numbers = sorted(random.sample(range(1, 100), 6))
-    st.success(f"🎉 Your lucky numbers: {lucky_numbers}")
+    st.subheader("🔮 Your Lucky Lottery Numbers:")
+    st.success(f"🎉 {lucky_numbers}")
