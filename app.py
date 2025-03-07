@@ -8,7 +8,7 @@ import random
 st.set_page_config(page_title="Lebanese Lottery Analyzer", page_icon="🎰")
 
 # Title
-st.title("🎰 Lebanese Lottery Number Generator")
+st.title("🎰 Lebanese Lottery Number Generator aka Jarrib hazzak")
 
 # Load dataset
 @st.cache_data
